@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<body>
+    <center><div class="content">
+        <h1>Авторизируйтесь</h1>
+        <input placeholder="логин" type="text" id="input" required>
+        <input placeholder="пароль" type="text" id="input1" required>
+        <button onclick="log()">Авторизоваться</button>
+    </div></center>
+
+    <script>
+        function log() {
+            var input = document.getElementById("input");
+            var text = input.value;
+            var input1 = document.getElementById("input1");
+            var text1 = input1.value;
+  
+            if (text.trim() !== '' && text1.trim() !== '') {
+                var paragraph = document.createElement("p");
+                var text = document.createTextNode("Вы успешно авторизированы! Теперь введите этот ключ продукта в программе: 9W6EPPTIfmP3AY7");
+                paragraph.appendChild(text);
+                document.body.appendChild(paragraph);
+            } else {
+                alert("Текстовые поля пустые!");
+            }
+        }
+    </script>
+</body>
+
+<style>
+    body {
+        background-image: url('media/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h1 {
+        font-family: sans-serif;
+        text-shadow: 1px 1px 1px #fff;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 15px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    input {
+        font-size: 18px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .content {
+        margin-top: 200px;
+    }
+</style>
